@@ -156,10 +156,36 @@
   .hero p.lead{font-size:17px; color:#C7D0E0; max-width:520px; margin-bottom:32px;}
   .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
 
-  .hero-stats{display:flex; gap:34px; margin-top:44px; flex-wrap:wrap;}
-  .hero-stats .stat b{display:block; font-family:'Space Grotesk',sans-serif; font-size:26px; color:var(--white);}
-  .hero-stats .stat span{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--grey-mid); letter-spacing:.06em;}
+  .hero-stats{
+    display:flex;
+    justify-content:flex-start; /* o center si quieres centrar todo el grupo */
+    gap:40px;
+    margin-top:44px;
+    flex-wrap:wrap;
+}
 
+.hero-stats .stat{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    min-width:120px;
+}
+
+.hero-stats .stat b{
+    display:block;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:28px;
+    color:var(--white);
+    margin-bottom:4px;
+}
+
+.hero-stats .stat span{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    color:var(--grey-mid);
+    letter-spacing:.08em;
+}
   /* Monitoring console signature element */
   .console{
     background:var(--navy-2);
@@ -334,3 +360,39 @@
     transition:transform .15s;
   }
   .wa-float:hover{transform:scale(1.06);}
+/* ---------- SECTORES ---------- */
+.sectors{
+  background: var(--grey-light);
+  padding: 38px 0;
+  border-top: 1px solid #E2E6ED;
+  border-bottom: 1px solid #E2E6ED;
+}
+
+.sector-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:18px;
+}
+
+.sector-chip{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 18px;
+  background:#fff;
+  border:1px solid #DDE2EA;
+  border-radius:30px;
+  color:var(--navy);
+  font-size:14px;
+  font-weight:600;
+}
+
+.sector-chip svg{
+  width:20px;
+  height:20px;
+  min-width:20px;
+  min-height:20px;
+  color:var(--yellow);
+  flex-shrink:0;
+}
